@@ -3,14 +3,14 @@ import {TEXTS} from "../../texts.ts";
 
 export default function Hero() {
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <section className="hero min-h-screen bg-base-200">
             <div className="hero-content text-center">
-                <div className="max-w-md">
+                <div className="max-w-md space-y-8">
                     <h1 className="text-5xl font-bold">{TEXTS.title}</h1>
-                    <p className="py-6">{TEXTS.heroContent}</p>
-                    <button className="btn btn-primary">Get Started</button>
+                    <h2 className="text-3xl">{TEXTS.heroContent}</h2>
+                    <button className="btn btn-primary">{TEXTS.buttons.getStarted}</button>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

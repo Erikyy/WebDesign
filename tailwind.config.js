@@ -7,6 +7,21 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [require("daisyui")],
+  plugins: [require("@tailwindcss/typography"), require("daisyui")],
+  daisyui: {
+    themes: [
+      {
+        webflow: {
+          "primary": "#428CE7",
+          "secondary": "#f6d860",
+          "accent": "#F5FBFF",
+          "neutral": "#3d4451",
+          "base-100": "#1E2224",
+        },
+      },
+      "dark",
+      "cupcake",
+    ],
+  },
 }
 
