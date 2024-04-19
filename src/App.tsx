@@ -4,6 +4,7 @@ import Hero from "./Components/Common/Hero.tsx";
 import Features from "./Components/Features.tsx";
 import {FEATURES} from "./texts.ts";
 import Testimonials from "./Components/Testimonials.tsx";
+import Plugins from "./Components/Plugins.tsx";
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
         <Header />
         <Hero />
         <Features features={FEATURES} />
+        <Plugins />
         <Testimonials />
         <Footer />
     </>

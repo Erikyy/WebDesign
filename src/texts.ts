@@ -5,37 +5,94 @@ export const TEXTS = {
     heroContent: "We offer you the tools to create modern web services!",
     buttons: {
         getStarted: 'Get Started'
+    },
+    features: {
+        title: 'Features and Pricing',
+        additionalContent: 'Choose your preferred edition',
     }
 };
 
+export type Pricing = {
+    value: string;
+    type: '/month' | '/annually' | null,
+    small: boolean,
+};
 
 export type Feature = {
     name: string;
+    additionalContent: string;
     features: string[],
+    buttonContent: string,
+    pricing: Pricing[],
 };
 
 export const FEATURES: Feature[] = [
     {
         name: 'Community Edition',
+        additionalContent: 'Best for self hosted solutions and for learning projects.',
         features: [
             "Open Source",
             "Plugin sdk (Rust, C++, ...)",
             "Web only",
             "Self hosted"
         ],
+        buttonContent: 'Get Started',
+        pricing: [
+            {
+                value: 'Free',
+                type: null,
+                small: false,
+            }
+        ],
     },
     {
         name: 'Pro Edition',
+        additionalContent: 'Use our hosting providers and more advanced tools.',
         features: [
             "Everything from Community Edition and:",
-            "Web or Mobile apps"
-        ]
+            "Web or Mobile apps",
+            "Only our hosting providers"
+        ],
+        buttonContent: 'Get Started',
+        pricing: [
+            {
+                value: '15€',
+                type: '/month',
+                small: false,
+            }
+        ],
     },
     {
         name: 'Enterprise Edition',
+        additionalContent: 'For businesses and more large scale applications.',
         features: [
             "Everything from Pro Edition and:",
-            "Hosting"
-        ]
+            "Self hosting",
+            "Advanced security features"
+        ],
+        buttonContent: 'Contact us',
+        pricing: [
+            {
+                value: 'Contact us for sales',
+                type: null,
+                small: true
+            }
+        ],
     }
-]
+];
+
+export type Plugin = {
+    name: string;
+};
+
+export const FIRST_PARTY_PLUGINS: Plugin[] = [
+    { name: "First Plugin" },
+    { name: "Second Plugin" },
+    { name: "Third Plugin" }
+];
+
+export const THIRD_PARTY_PLUGINS: Plugin[] = [
+    { name: "First Plugin" },
+    { name: "Second Plugin" },
+    { name: "Third Plugin" }
+];
