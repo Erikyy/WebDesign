@@ -9,6 +9,9 @@ export const TEXTS = {
     features: {
         title: 'Features and Pricing',
         additionalContent: 'Choose your preferred edition',
+    },
+    plugins: {
+        support: 'Our tools have support for first and thirdparty plugins',
     }
 };
 
