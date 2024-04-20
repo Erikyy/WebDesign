@@ -3,13 +3,12 @@ import {Reason, REASONS_TO_USE} from "../texts.ts";
 
 function ReasonComponent(props: Reason) {
     return <div className='min-w-40 max-w-96 space-y-4'>
-        <h3 className='text-4xl'>
+        <h3 className='text-4xl font-extrabold'>
             {props.header}
         </h3>
-        <p className='text-3xl'>{props.content}</p>
+        <p className='text-xl'>{props.content}</p>
     </div>;
 }
-
 
 export default function WhyUseWebFlow() {
     return (

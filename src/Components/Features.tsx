@@ -15,7 +15,7 @@ function FeatureInternal(props: {
             <div className="card-body w-full justify-between space-y-8">
                 <div className='space-y-4'>
                     <div className='space-y-4 min-h-28'>
-                        <h2 className="card-title w-full justify-center text-2xl">{name}</h2>
+                        <h3 className="card-title w-full justify-center text-2xl">{name}</h3>
                         <p className='flex w-full justify-center text-center font-light'>{additionalContent}</p>
                     </div>
                     <div className='flex justify-center w-full min-h-10'>
@@ -39,7 +39,7 @@ function FeatureInternal(props: {
                     </ul>
                 </div>
                 <div className="card-actions justify-center">
-                    <button className="btn btn-primary w-full text-accent">{buttonContent}</button>
+                    <button title={`${buttonContent} with ${name}`} aria-label={buttonContent} tabIndex={0} className="btn btn-primary w-full text-accent">{buttonContent}</button>
                 </div>
             </div>
         </div>
@@ -52,7 +52,7 @@ export default function Features(props: FeaturesProps) {
         <>
             <div className='flex w-full justify-center py-4 pt-8'>
                 <div className='text-center space-y-4'>
-                    <h2 className='text-4xl font-bold'>{TEXTS.features.title}</h2>
+                    <h2 className='text-4xl font-extrabold'>{TEXTS.features.title}</h2>
                     <p className='font-light text-xl'>{TEXTS.features.additionalContent}</p>
                 </div>
             </div>
