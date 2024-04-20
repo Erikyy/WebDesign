@@ -22,7 +22,7 @@ function FeatureInternal(props: {
                         {
                             pricing.map((price) => {
                                 return (
-                                    <div className="flex justify-center items-baseline">
+                                    <div key={price.value} className="flex justify-center items-baseline">
                                         <span className={`mr-2 ${price.small ? 'text-md font-light' : 'text-2xl font-extrabold'}`}>{price.value}</span>
                                         {price.type !== null && <span className="text-gray-500 dark:text-gray-400">{price.type}</span>}
                                     </div>
@@ -33,7 +33,7 @@ function FeatureInternal(props: {
                     <ul className='list-disc md:px-4'>
                     {
                         features.map((item) => {
-                            return <li>{item}</li>
+                            return <li key={item}>{item}</li>
                         })
                     }
                     </ul>
@@ -59,7 +59,7 @@ export default function Features(props: FeaturesProps) {
             <div className='flex flex-col space-y-4 md:space-y-0 md:flex-row justify-center px-8 md:space-x-3 lg:px-4 py-8'>
             {
                 props.features.map((item) => {
-                    return <FeatureInternal feature={item} />
+                    return <FeatureInternal key={item.name} feature={item} />
                 })
             }
             </div>

@@ -6,6 +6,7 @@ import {FEATURES} from "./texts.ts";
 import Testimonials from "./Components/Testimonials.tsx";
 import Plugins from "./Components/Plugins.tsx";
 import ContactUs from "./Components/ContactUs.tsx";
+import WhyUseWebFlow from "./Components/WhyUseWebFlow.tsx";
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
     <>
         <Header />
         <Hero />
+        <WhyUseWebFlow />
         <Features features={FEATURES} />
         <Plugins />
         <Testimonials />

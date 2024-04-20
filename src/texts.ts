@@ -99,3 +99,27 @@ export const THIRD_PARTY_PLUGINS: Plugin[] = [
     { name: "Second Plugin" },
     { name: "Third Plugin" }
 ];
+
+export type Reason = {
+    header: string;
+    content: string;
+}
+
+export const REASONS_TO_USE: Reason[] = [
+    {
+        header: 'Free community edition',
+        content: 'Get started for free using our basic version of our tools.'
+    },
+    {
+        header: 'Easy to use',
+        content: 'Our tools are created to be easy to use for experienced developers and beginners.'
+    },
+    {
+        header: 'Extensible',
+        content: 'Our integration with first and third party plugins allows you to extend your web and mobile apps.'
+    },
+    {
+        header: 'Mobile apps',
+        content: 'With our tools. It makes poosible to create easy to use mobile apps in parallel to web apps.'
+    }
+];

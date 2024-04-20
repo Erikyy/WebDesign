@@ -16,7 +16,7 @@ export default function Plugins() {
                     </div>
                     <ul className='list-disc pl-8 min-h-24'>
                         {FIRST_PARTY_PLUGINS.map((item) => {
-                            return <li>{item.name}</li>
+                            return <li key={item.name}>{item.name}</li>
                         })}
                     </ul>
                     <div className='w-full flex justify-center'>
@@ -29,7 +29,7 @@ export default function Plugins() {
                     </div>
                     <ul className='list-disc pl-8 min-h-24'>
                         {THIRD_PARTY_PLUGINS.map((item) => {
-                            return <li>{item.name}</li>
+                            return <li key={item.name}>{item.name}</li>
                         })}
                     </ul>
                     <div className='w-full flex justify-center'>
